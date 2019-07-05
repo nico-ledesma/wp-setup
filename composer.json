@@ -1,0 +1,25 @@
+{
+  "name": "nico-ledesma/wp-setup",
+  "description": "Tool for WordPress theme development containing modules to perform common tasks.",
+  "type": "package",
+  "require": {
+    "php": ">=7.1",
+    "composer/installers": "~1.0"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nicolas Ledesma",
+      "email": "nicolas.ledesma88@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Cusqo\\WPSetup\\": "src/",
+      "Cusqo\\WPSetup\\Modules\\": "src/Modules/"
+    },
+    "files": [
+      "src/wp-setup.php"
+    ]
+  }
+}
