@@ -46,14 +46,4 @@ class CleanUp extends Module
             add_filter('show_recent_comments_widget_style', '__return_false');
         }, 9999);
     }
-
-    /**
-     * Wrap embeds in extra markup
-     */
-    private function addResponsiveEmbeds()
-    {
-        add_filter( 'embed_oembed_html', function($html){
-            return '<div class="wp-embed"><div class="wp-embed-inner">' . $html . '</div></div>';
-        }, 10);
-    }
 }
