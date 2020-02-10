@@ -29,7 +29,14 @@ class EnhanceEmbeds extends Module
     private function wrapEmbeds()
     {
         add_filter( 'embed_oembed_html', function($html){
-            return '<div class="wp-embed"><div class="wp-embed-inner">' . $html . '</div></div>';
+            $isYouTube = strpos($html, 'youtube.com/embed') !== false;
+            $isVimeo = strpos($html, 'player.vimeo.com/video') !== false;
+
+            if ($isYouTube || $isVimeo) {
+                return '<div class="wp-embed wp-embed-video"><div class="wp-embed-inner">' . $html . '</div></div>';
+            } else {
+                return '<div class="wp-embed"><div class="wp-embed-inner">' . $html . '</div></div>';
+            }
         }, 10);
     }
 }
