@@ -57,7 +57,7 @@ class PurgeSuperCache extends Module
     /**
      * Setup cache invalidation
      */
-    private function setupCachePurge()
+    protected function setupCachePurge()
     {
         $that = $this;
 

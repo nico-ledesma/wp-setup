@@ -26,7 +26,7 @@ class EnhanceEmbeds extends Module
     /**
      * Wrap embeds in extra markup
      */
-    private function wrapEmbeds()
+    protected function wrapEmbeds()
     {
         add_filter( 'embed_oembed_html', function($html){
             $isYouTube = strpos($html, 'youtube.com/embed') !== false;

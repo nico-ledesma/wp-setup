@@ -26,7 +26,7 @@ class JqueryCdn extends Module
     /**
      * Load jQuery from a CDN
      */
-    private function replaceJQuery()
+    protected function replaceJQuery()
     {
         add_action('wp_enqueue_scripts', function () {
             wp_deregister_script('jquery');

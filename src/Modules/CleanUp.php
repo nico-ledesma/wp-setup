@@ -27,7 +27,7 @@ class CleanUp extends Module
     /**
      * Remove unnecessary head tags
      */
-    private function removeTags()
+    protected function removeTags()
     {
         add_action('init', function () {
             remove_action('wp_head', 'feed_links_extra', 3);

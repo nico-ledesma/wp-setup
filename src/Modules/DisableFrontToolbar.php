@@ -26,7 +26,7 @@ class DisableFrontToolbar extends Module
     /**
      * Remove admin toolbar in the frontend
      */
-    private function removeToolbar()
+    protected function removeToolbar()
     {
         add_filter('show_admin_bar', '__return_false');
     }

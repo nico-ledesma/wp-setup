@@ -24,7 +24,7 @@ class DisableTrackbacks extends Module
     /**
      * Disable trackbacks/pingbacks
      */
-    private function disable()
+    protected function disable()
     {
         // Disable pingback XMLRPC method
         add_filter('xmlrpc_methods', function ($methods) {

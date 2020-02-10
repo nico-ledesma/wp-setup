@@ -27,7 +27,7 @@ class FacebookPixel extends Module
      * Print snippet in <head>
      * @param string $id
      */
-    private function printSnippet($id)
+    protected function printSnippet($id)
     {
         // Don't print if an ID is not provided
         if (!isset($id) || !$id) {

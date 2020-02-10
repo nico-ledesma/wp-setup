@@ -24,7 +24,7 @@ class AddScriptAttributes extends Module
     /**
      * Add script attributes
      */
-    private function addAttributes($args)
+    protected function addAttributes($args)
     {
         if (!is_array($args)) {
             return;

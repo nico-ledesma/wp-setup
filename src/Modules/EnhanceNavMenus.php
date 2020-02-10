@@ -30,7 +30,7 @@ class EnhanceNavMenus extends Module
     /**
      * Add class indicating sub-menu depth
      */
-    private function addSubMenuClasses()
+    protected function addSubMenuClasses()
     {
         add_filter('nav_menu_submenu_css_class', function ($classes, $args, $depth) {
             $classes[] = 'sub-menu-lvl-' . $depth;
@@ -41,7 +41,7 @@ class EnhanceNavMenus extends Module
     /**
      * Add class indicating menu-item depth
      */
-    private function addMenuItemClasses()
+    protected function addMenuItemClasses()
     {
         add_filter('nav_menu_css_class', function ($classes, $item, $args, $depth) {
             $classes[] = 'menu-item-lvl-' . $depth;
