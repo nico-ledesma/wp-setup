@@ -20,7 +20,6 @@ class CleanUp extends Module
     {
         if (!is_admin()) {
             $this->removeTags();
-            $this->addResponsiveEmbeds();
         }
     }
 
